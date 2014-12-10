@@ -1,0 +1,6 @@
+- if @tags.any?
+  - @tags.each do |media_item|
+    = image_tag media_item.images.thumbnail.url
+
+- else
+  None found
