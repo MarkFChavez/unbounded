@@ -6,13 +6,13 @@ class HomeController < ApplicationController
 
   private
 
-  def client
+  def instagram_client
     Instagram.client
   end
 
   def search_tag
-    tags = client.tag_search search_params["hashtag"]
-    client.tag_recent_media(tags[0].name) rescue []
+    tags = instagram_client.tag_search search_params["hashtag"]
+    instagram_client.tag_recent_media(tags[0].name) rescue []
   end
 
   def has_hashtag?

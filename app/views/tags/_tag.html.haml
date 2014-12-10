@@ -1,6 +1,7 @@
 - if @tags.any?
   - @tags.each do |media_item|
-    = image_tag media_item.images.thumbnail.url
+    = link_to media_item.link, target: "_blank" do
+      = image_tag media_item.images.thumbnail.url
 
 - else
   None found
