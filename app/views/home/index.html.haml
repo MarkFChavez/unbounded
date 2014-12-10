@@ -1,0 +1,22 @@
+%h1 Unbounded
+%hr
+
+= form_tag root_path, method: :get do
+  %div
+    Search Hashtag: 
+    = text_field_tag "search[hashtag]", nil
+
+  %div
+    = submit_tag "Submit"
+
+
+%div
+  - if @tags.any?
+    - @tags.each do |media_item|
+      = image_tag media_item.images.thumbnail.url
+
+  - else
+    %h4 None found
+
+
+

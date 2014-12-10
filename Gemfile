@@ -1,5 +1,14 @@
 source 'https://rubygems.org'
 
+gem 'haml'
+gem 'haml-rails'
+
+gem 'instagram'
+
+group :development, :test do
+  gem 'pry'
+  gem 'pry-rails'
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'
