@@ -23,4 +23,5 @@ class HomeController < ApplicationController
     params.require(:search).
       permit(:hashtag)
   end
+
 end
